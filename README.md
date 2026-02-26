@@ -8,6 +8,12 @@ Unlike modern applications that rely on heavy libraries like OpenCV, this projec
 
 The engine parses the raw binary headers of a `.bmp` file, allocates the exact amount of contiguous memory required, transforms the RGB pixels mathematically, and then safely frees the memory to prevent leaks.
 
+### 🎨 Visual Examples
+
+| Original Input | Grayscale Filter | Sepia Filter | Edge Detection |
+| :---: | :---: | :---: | :---: |
+| <img src="docs/figures/input.png" width="200"/> | <img src="docs/figures/grayscale.png" width="200"/> | <img src="docs/figures/sepia.png" width="200"/> | <img src="docs/figures/edges.png" width="200"/> |
+
 ## 🚀 Engineering Highlights
 
 *   **Custom Binary Parsing:** Implements memory-aligned (`#pragma pack(get)`) structures (`BMPFileHeader`, `BMPInfoHeader`) to flawlessly decode standard 24-bit uncompressed bitmaps directly from disk.
@@ -31,6 +37,8 @@ c-image-processor/
 ├── build/               # Compiled Object (.o) files
 ├── bin/                 # Final Executable
 ├── data/                # Directory for test .bmp files
+├── docs/                # Documentation & Screenshots
+│   └── figures/         # Example PNGs for the README
 ├── Makefile             # GNU Make build instructions
 ├── .gitignore           # C Workspace ignore rules
 └── README.md            # Project documentation
