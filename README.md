@@ -16,7 +16,8 @@ The engine parses the raw binary headers of a `.bmp` file, allocates the exact a
 
 ## 🚀 Engineering Highlights
 
-*   **Custom Binary Parsing:** Implements memory-aligned (`#pragma pack(get)`) structures (`BMPFileHeader`, `BMPInfoHeader`) to flawlessly decode standard 24-bit uncompressed bitmaps directly from disk.
+*   **Why `.bmp`? (Zero Dependencies):** Unlike `.png` or `.jpg` which require complex mathematical decompression algorithms (DEFLATE, DCT) or heavy external libraries (`libpng`), the standard 24-bit Bitmap format is raw and uncompressed. This allows the engine to map the file directly into RAM and manipulate the exact RGB bytes using pointers, fulfilling the project's goal of zero external dependencies.
+*   **Custom Binary Parsing:** Implements memory-aligned (`#pragma pack(push, 1)`) structures (`BMPFileHeader`, `BMPInfoHeader`) to flawlessly decode standard bitmaps directly from disk.
 *   **Dynamic Memory Management:** Strictly utilizes `malloc` and `free` within the logic pipeline. Prevents *Memory Leaks* by tracking dynamically allocated Pixel arrays.
 *   **Linear Algebra Transformations:**
     *   `[Grayscale]`: Uses the human-eye luminosity weighted average `(R * 0.299 + G * 0.587 + B * 0.114)`.
