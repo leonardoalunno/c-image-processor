@@ -1,5 +1,9 @@
 # 🖼️ C Image Processing Engine
 
+![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
+![Computer Graphics](https://img.shields.io/badge/Computer_Graphics-Linear_Algebra-blue?style=for-the-badge)
+![Memory Management](https://img.shields.io/badge/Memory_Management-Pointers_%26_Heap-red?style=for-the-badge)
+
 A lightweight, zero-dependency image processing engine written in pure C for parsing and manipulating uncompressed Bitmap (`.bmp`) images.
 
 ## 📖 Overview
