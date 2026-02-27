@@ -51,6 +51,18 @@ c-image-processor/
 
 ## ⚙️ How to Run
 
+### Quick Start (Mac Executable)
+The easiest way to test the filters on macOS is to download the compiled release:
+1. Go to the **[Releases](https://github.com/leonardoalunno/c-image-processor/releases/)** page on the right side of this repository.
+2. Download and extract the `image-processor-mac.zip` file.
+3. Open your terminal in the extracted folder.
+4. Make the file executable (first time only): `chmod +x bin/image_processor`
+5. Run a filter (e.g., Grayscale):
+   ```bash
+   ./bin/image_processor -g data/input.bmp data/my_output.bmp
+   ```
+
+### Advanced (Compile from Source for Mac/Linux/Windows)
 1. Clone the repository and navigate to the project root:
    ```bash
    git clone https://github.com/leonardoalunno/c-image-processor.git
